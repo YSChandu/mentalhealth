@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>MindCare</h1>
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a class="nav-link active" href="#">Home</a></li>
+                        <li><a class="nav-link" href="issues.html">Mental Issues</a></li>
+                        <li><a class="nav-link" href="resources">Maintain Balance</a></li>
+                        <li><a class="nav-link" href="ourservices.html">Our Services</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                    </ul>
+                </nav>
+                {% if user.is_authenticated %}
+                <a class="login-link" href="logout">Logout</a>
+                {% else %}
+                <a class="login-link" href="login">Login/SignUp</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            {% if user.is_authenticated %}
+            <h1>Welcome {{ user.username }}</h1>
+            {% else %}
+            <h1>Welcome to MindCare</h1>
+            {% endif %}
+            <p>Your journey to mental wellness starts here</p>
+            <a href="#quiz" class="cta-button">Take the Survey</a>
+        </div>
+    </section>
+
+    <section id="image-section" class="image-section">
+        <div class="container">
+            <img src="{% static 'm.jpg/download.jpeg' %}" alt="Mental Health Image" class="main-image">
+        </div>
+    </section>
+
+    <section id="articles" class="articles-section">
+        <div class="container">
+            <h2>Featured Articles</h2>
+            <div class="article-list">
+                <article class="article-card">
+                    <img src="{% static 'm.jpg/download.jpg' %}" alt="Anxiety" class="article-graphic">
+                    <div class="article-content">
+                        <h3>Understanding Anxiety</h3>
+                        <p>An in-depth look at anxiety, its symptoms, and coping mechanisms.</p>
+                        <a href="anxiety.html" class="read-more-link">Read more</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <img src="{% static 'm.jpg/deperssion.jpg' %}" alt="Depression" class="article-graphic">
+                    <div class="article-content">
+                        <h3>Managing Depression</h3>
+                        <p>Learn about depression and effective strategies to manage it.</p>
+                        <a href="depression.html" class="read-more-link">Read more</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <img src="{% static 'm.jpg/4 Ways Going Outside Can Improve Your Mental Health, According to Research.jpg' %}" alt="Mindfulness" class="article-graphic">
+                    <div class="article-content">
+                        <h3>Mindfulness Techniques</h3>
+                        <p>Discover mindfulness techniques to improve your mental well-being.</p>
+                        <a href="mindful.html" class="read-more-link">Read more</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="mentalhealthhotlines.html">Mental Health Hotlines</a></li>
+                <li><a href="supportgroups.html">Support Groups</a></li>
+                <li><a href="onlinetherapy.html">Online Therapy</a></li>
+                <li><a href="selfhelpbooks.html">Self-Help Books</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2>Mental Health Quiz</h2>
+            <p>Take our quiz to assess your mental health and get personalized recommendations.</p>
+            <a href="quiz.html" class="btn">Take the Quiz</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mental Health Resources. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>   change this as your the highly qualified web developer and change this code and css accordingly you have to win the competitoin so give your best to do it use javascript and react and all . take reference from the website health.com 

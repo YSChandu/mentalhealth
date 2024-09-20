@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FAFAFA; /* Neutral Background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+.header {
+    background-color: #ffffff; /* White */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    color: #2E2E2E; /* Text */
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FF7F50; /* Accent Coral */
+}
+
+.login-link {
+    color: #2E2E2E; /* Text */
+    padding: 10px 15px;
+    border: 1px solid #2E2E2E; /* Text */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-link:hover {
+    background-color: #A8D5BA; /* Secondary Green */
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #6bb4fe; /* Primary Blue */
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h1 {
+    letter-spacing: 20px;
+    color: #2E2E2E; /* Text */
+    animation: fadeIn 1.5s ease;
+}
+
+.cta-button {
+    background-color: #FF7F50; /* Accent Coral */
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #A8D5BA; /* Secondary Green */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image Section */
+.image-section {
+    padding: 20px 0;
+}
+
+.main-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Articles Section */
+.articles-section {
+    padding: 40px 0;
+}
+
+.article-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.article-card {
+    background-color: #ffffff; /* White */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+}
+
+.article-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.article-graphic {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #A7C7E7; /* Primary Blue */
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-graphic {
+    transform: scale(1.1);
+}
+
+.article-content {
+    padding: 20px;
+}
+
+.read-more-link {
+    color: #A7C7E7; /* Primary Blue */
+    text-decoration: underline;
+}
+
+/* Resources Section */
+.resources-section {
+    padding: 40px 0;
+}
+
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resources li {
+    background-color: #ffffff; /* White */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#resources li a {
+    color: #2E2E2E; /* Text */
+    font-size: 18px;
+}
+
+#resources li:hover {
+    background-color: #A8D5BA; /* Secondary Green */
+}
+
+/* Quiz Section */
+.quiz-section {
+    background-color: #ffffff; /* White */
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-section .btn {
+    background-color: #FF7F50; /* Accent Coral */
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-section .btn:hover {
+    background-color: #A8D5BA; /* Secondary Green */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #ffffff; /* White */
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    color: #2E2E2E; /* Text */
+}

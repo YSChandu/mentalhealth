@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Wellness Resources</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #ffffff;
+            margin-bottom: 40px;
+            text-align: center;
+            animation: fade-in-title 1.5s ease;
+            letter-spacing: 1px;
+        }
+
+        .resource-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .resource-box {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            position: relative;
+            animation: fade-in-box 1.2s ease;
+        }
+
+        .resource-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .resource-box h2 {
+            font-size: 24px;
+            color: #4b79a1; /* Calm blue heading */
+            margin: 15px 0;
+        }
+
+        .resource-box p {
+            font-size: 16px;
+            color: #7f8c8d; /* Soft grey text for readability */
+            margin-bottom: 20px;
+        }
+
+        .resource-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .resource-box:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fade-in-title {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fade-in-box {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .resource-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Mental Wellness Resources</h1>
+
+    <div class="resource-container">
+
+        <!-- Breathing Exercises -->
+        <div class="resource-box">
+            <img src="https://example.com/breathing.jpg" alt="Breathing Exercises">
+            <h2>Breathing Exercises</h2>
+            <p>Relax and calm your mind with guided breathing techniques for mental clarity.</p>
+        </div>
+
+        <!-- Workouts -->
+        <div class="resource-box">
+            <img src="https://example.com/workouts.jpg" alt="Workouts">
+            <h2>Workouts</h2>
+            <p>Relieve stress and anxiety with curated workout routines for a healthy body and mind.</p>
+        </div>
+
+        <!-- Yoga -->
+        <div class="resource-box">
+            <img src="https://example.com/yoga.jpg" alt="Yoga">
+            <h2>Yoga</h2>
+            <p>Improve flexibility and focus with peaceful yoga practices tailored for mental well-being.</p>
+        </div>
+
+        <!-- Music & Podcasts -->
+        <div class="resource-box">
+            <img src="https://example.com/music.jpg" alt="Music & Podcasts">
+            <h2>Music & Podcasts</h2>
+            <p>Discover music and podcasts designed to soothe your mind and elevate your mood.</p>
+        </div>
+
+        <!-- YouTube Videos -->
+        <div class="resource-box">
+            <img src="https://example.com/youtube.jpg" alt="YouTube Videos">
+            <h2>YouTube Videos</h2>
+            <p>Explore videos about mental health awareness and self-care strategies for a positive outlook.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
