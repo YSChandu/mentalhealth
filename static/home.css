@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family:"Lato" , sans-serif;
     font-weight: 400;
@@ -449,37 +449,6 @@ header {
     color: #505050;
     margin-bottom: 8px;
 }
-
-/* Footer Social Media Links
-.footer-social {
-    flex: 1;
-    margin: 20px;
-}
-
-.footer-social h3 {
-
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: rgb(255, 195, 66); /* Coral color for heading */
-}
-
-/* .footer-social a {
-    color: #505050;
-    margin-right: 15px;
-}
-
-.footer-social img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.footer-social img:hover {
-    color: #3e3e3e;
-    transform: scale(1.1); /* Grow the icon on hover
- } */
-
  .social-icons {
     margin-top: 10px;
 }

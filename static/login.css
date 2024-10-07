@@ -47,7 +47,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 input[type="submit"] {
-    background-color: #3498db; /* Soft blue button */
+    background-color: #505050; /* Soft blue button */
     color: white;
     padding: 12px 20px;
     border: none;
@@ -103,12 +103,13 @@ p {
 }
 
 .forgot-password a {
-    color: #3498db; /* Matching link color */
+    color: #505050; /* Matching link color */
     font-size: 14px;
     text-decoration: none;
 }
 
 .forgot-password a:hover {
+    color: rgb(255, 195, 66);
     text-decoration: underline;
 }
 

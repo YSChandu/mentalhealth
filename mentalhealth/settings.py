@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'mentalhealth.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mindcare',  # Replace with your database name
+        'USER': 'root',        # Replace with your MySQL username
+        'PASSWORD': 'SAIchandu@8328523705',    # Replace with your MySQL password
+        'HOST': 'localhost',            # Set to 'localhost' or your database host
+        'PORT': '3306',                 # Default MySQL port
     }
 }
+
 
 
 # Password validation

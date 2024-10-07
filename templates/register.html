@@ -96,6 +96,10 @@
 
         <form method="POST" action="{% url 'register' %}">
             {% csrf_token %}
+            <p>firstname:</p>
+            <input type="text" name="first_name" required placeholder="Enter firstname"/>
+            <p>lastname:</p>
+            <input type="text" name="last_name" required placeholder="Enter lastname"/>
             <p>Username:</p>
             <input type="text" name="username" required placeholder="Enter Username"/>
             <p>Email:</p>

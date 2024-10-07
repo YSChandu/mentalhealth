@@ -53,7 +53,7 @@ body {
 .resource-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 60px;
   width: 100%;
   max-width: 1200px;
 }
@@ -75,7 +75,8 @@ body {
   border-radius: 12px;
 }
 
-.resource-box h2 {
+.resource-box h2,a{
+  text-decoration: none;
   font-size: 24px;
   color: #505050; /* Calm blue heading */
   margin: 15px 0;

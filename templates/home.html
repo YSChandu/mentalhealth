@@ -23,7 +23,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="#">Mental Health Issues</a></li>
+                    <li><a href="{% url 'issues' %}">Mental Health Issues</a></li>
                     <li><a href="resources">Well-being</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
@@ -34,12 +34,12 @@
                 {% if user.is_authenticated%}
                 <button class="profile-btn" id="profileBtn">Profile</button>
                 <div class="dropdown-content" id="dropdown">
-                    <a href="#">My Profile</a>
+                    <a href='profile'>My Profile</a>
                     <a href="#">Schedule</a>
                     <a href='logout'>Logout</a>
                 </div>
                 {%else%}
-                <a class="profile-btn" href="login">Login</a>
+                <a class="profile-btn" href={% url 'login' %}>Login</a>
                 {% endif%}
             </div>
         </div>
@@ -63,7 +63,7 @@
                 {% endif%}
             </div>
             <div class="hero-element">
-                <a href="#quiz">Take the Survey</a>
+                <a href="{%  url 'chatbot' %}">Take the Survey</a>
             </div>
         </div>
     </section>

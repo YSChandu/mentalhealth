@@ -14,7 +14,7 @@
             <h1>Mental Wellness Resources</h1>
         </div>
         <div class= "header-content">
-            <a href='.'>
+            <a href="{% url 'home' %}">
                 Home
             </a>
         </div>
@@ -44,14 +44,14 @@
         </div>
 
         <!-- Yoga -->
-        <div class="resource-box">
+        <div onclick="navigatetoyoga();" class="resource-box">
             <img src="{% static 'm.jpg/yoga2.jpeg'%}" alt="Yoga">
-            <h2>Yoga</h2>
+            <a >Yoga</a>
             <p>Improve flexibility and focus with peaceful yoga practices tailored for mental well-being.</p>
         </div>
 
         <!-- Music & Podcasts -->
-        <div class="resource-box">
+        <div onclick="navigatetomusic();"class="resource-box">
             <img src="{% static 'm.jpg/music.jpeg'%}" alt="Music and Podcasts">
             <h2>Music & Podcasts</h2>
             <p>Discover music and podcasts designed to soothe your mind and elevate your mood.</p>
@@ -70,6 +70,16 @@
             <p>Wanna see some awesome movies related to mental health .</p>
         </div>
     </div>
+    <script>
+         function navigatetoyoga(){
+            const loc = "{% url 'yoga'%}";
+            window.location.href=loc;
+         }
+         function navigatetomusic(){
+            const loc = "{% url 'music' %}";
+            window.location.href=loc;
+         }
+    </script>
 
 </body>
 </html>

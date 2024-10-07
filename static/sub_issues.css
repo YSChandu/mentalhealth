@@ -1,0 +1,79 @@
+* {
+    background-color: rgb(255, 255, 255);
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.tagline {
+    font-style: italic;
+    background-color: transparent;
+}
+header {
+    color: #000000;
+    padding:20px;
+    text-align: center;
+
+    background-image: url('disorder.jpg');
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; 
+}
+h1 {
+    background-color: transparent;
+    font-size: 50px;
+    color: #000000;
+    font-style: oblique;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h2 {
+    font-size: 40px;
+    color: #000000;
+    margin: 0;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+}
+h2:hover {
+    color: rgb(69, 54, 164);
+}
+
+h3 {
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h4 {
+    font-size: 30px;
+}
+h3:hover {
+    color: rgb(69, 54, 164);
+}
+ul {
+    padding-left: 40px;
+}
+ul li {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+ul li a:hover {
+    color:rgb(69, 54, 164);
+} 
+p, ul {
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+  a {
+    color: #3379da
+  }
+  a:hover {
+    color :rgb(69, 54, 164);
+    text-decoration:underline;
+  }
+footer p {
+    color:#303030;
+    font-family:sans-serif;
+    font-style: italic;
+}

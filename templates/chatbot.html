@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7f8;
+        color: #333;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    /* Title styling */
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+    }
+
+    /* Form styling */
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        transition: border 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
+    /* Button styling */
+    button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+
+    /* Conversation history styling */
+    h2 {
+        margin-top: 20px;
+        color: #2c3e50;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    hr {
+        margin: 10px 0;
+        border: 1px solid #ddd;
+    }
+
+    p:empty {
+        text-align: center;
+        color: #999;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Chat with our Mental Health Chatbot</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <label for="user_input">Tell me how you're feeling:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Send</button>
+    </form>
+
+    {% if bot_response %}
+        <p><strong>You:</strong> {{ user_input }}</p>
+        <p><strong>Bot:</strong> {{ bot_response }}</p>
+    {% endif %}
+
+    <h2>Your Conversation History</h2>
+    {% for convo in conversations %}
+        <p><strong>You:</strong> {{ convo.user_input }}</p>
+        <p><strong>Bot:</strong> {{ convo.bot_response }}</p>
+        <hr>
+    {% empty %}
+        <p>No previous conversations found.</p>
+    {% endfor %}
+</body>
+</html>
